@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FabLab — Inventário</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET & TOKENS ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0d0f14;
+      --surface:    #151820;
+      --surface2:   #1c2030;
+      --border:     #252a3a;
+      --accent:     #00e5a0;
+      --accent2:    #0099ff;
+      --warn:       #ffb03a;
+      --danger:     #ff4d6d;
+      --text:       #e8eaf2;
+      --muted:      #7a8099;
+      --font-mono:  'Space Mono', monospace;
+      --font-body:  'DM Sans', sans-serif;
+      --radius:     8px;
+      --radius-lg:  14px;
+      --shadow:     0 4px 24px rgba(0,0,0,0.4);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* ── SIDEBAR ─────────────────────────────────────────────────── */
+    #sidebar {
+      width: 220px;
+      min-height: 100vh;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .sidebar-logo {
+      padding: 28px 20px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-logo .lab { font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
+    .sidebar-logo h1 { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.1; margin-top: 4px; }
+    .sidebar-logo h1 span { color: var(--accent); }
+
+    nav { padding: 12px 0; flex: 1; }
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: all .15s;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+    }
+    nav a:hover { color: var(--text); background: var(--surface2); }
+    nav a.active { color: var(--accent); border-left-color: var(--accent); background: rgba(0,229,160,.06); }
+    nav a .icon { font-size: 16px; width: 20px; text-align: center; }
+
+    .sidebar-badge {
+      margin-left: auto;
+      background: var(--danger);
+      color: white;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      padding: 1px 6px;
+      border-radius: 20px;
+      display: none;
+    }
+    .sidebar-badge.show { display: block; }
+
+    /* ── MAIN ────────────────────────────────────────────────────── */
+    #main {
+      flex: 1;
+      padding: 32px;
+      overflow-y: auto;
+      max-width: 1200px;
+    }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── PAGE HEADER ─────────────────────────────────────────────── */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .page-header h2 {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .page-header h2 span { color: var(--accent); }
+
+    /* ── CARDS ───────────────────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+    .card-stat { font-family: var(--font-mono); font-size: 36px; font-weight: 700; line-height: 1; }
+    .card-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; }
+    .card.accent { border-color: rgba(0,229,160,.3); }
+    .card.accent .card-stat { color: var(--accent); }
+    .card.warn { border-color: rgba(255,176,58,.3); }
+    .card.warn .card-stat { color: var(--warn); }
+    .card.danger { border-color: rgba(255,77,109,.3); }
+    .card.danger .card-stat { color: var(--danger); }
+    .card.blue { border-color: rgba(0,153,255,.3); }
+    .card.blue .card-stat { color: var(--accent2); }
+
+    /* ── FILTROS ─────────────────────────────────────────────────── */
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+    .filters input, .filters select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      padding: 9px 14px;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .filters input:focus, .filters select:focus { border-color: var(--accent); }
+    .filters input { min-width: 220px; }
+
+    /* ── BOTÕES ──────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all .15s;
+    }
+    .btn-primary { background: var(--accent); color: #0d0f14; }
+    .btn-primary:hover { background: #00c988; }
+    .btn-danger { background: transparent; border: 1px solid var(--danger); color: var(--danger); }
+    .btn-danger:hover { background: var(--danger); color: white; }
+    .btn-ghost { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-sm { padding: 5px 12px; font-size: 12px; }
+    .btn-warn { background: transparent; border: 1px solid var(--warn); color: var(--warn); }
+    .btn-warn:hover { background: var(--warn); color: #0d0f14; }
+
+    /* ── TABLE ───────────────────────────────────────────────────── */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    thead tr { background: var(--surface2); }
+    th {
+      padding: 12px 16px;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    td { padding: 12px 16px; border-top: 1px solid var(--border); vertical-align: middle; }
+    tr:hover td { background: rgba(255,255,255,.02); }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .badge-cat { background: rgba(0,153,255,.15); color: var(--accent2); }
+    .badge-ok { background: rgba(0,229,160,.15); color: var(--accent); }
+    .badge-low { background: rgba(255,176,58,.15); color: var(--warn); }
+    .badge-zero { background: rgba(255,77,109,.15); color: var(--danger); }
+    .badge-ativo { background: rgba(255,176,58,.15); color: var(--warn); }
+    .badge-devolvido { background: rgba(0,229,160,.15); color: var(--accent); }
+    .badge-entrada { background: rgba(0,229,160,.1); color: var(--accent); }
+    .badge-saida { background: rgba(255,77,109,.1); color: var(--danger); }
+
+    .qty { font-family: var(--font-mono); font-size: 15px; font-weight: 700; }
+
+    /* ── MODAL ───────────────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: var(--shadow);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal h3 {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      margin-bottom: 22px;
+      color: var(--accent);
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      font-family: var(--font-mono);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border-color .15s;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 22px; }
+
+    /* ── TOAST ───────────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      pointer-events: none;
+    }
+    .toast-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      font-size: 13.5px;
+      box-shadow: var(--shadow);
+      animation: toastIn .25s ease;
+      pointer-events: auto;
+    }
+    .toast-item.success { border-left: 3px solid var(--accent); }
+    .toast-item.error { border-left: 3px solid var(--danger); }
+    .toast-item.warn { border-left: 3px solid var(--warn); }
+    @keyframes toastIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ── ALERTAS BOX ─────────────────────────────────────────────── */
+    .alertas-box {
+      background: var(--surface);
+      border: 1px solid rgba(255,176,58,.25);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .alertas-box h3 {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--warn);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .alerta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .alerta-row:first-of-type { border-top: none; }
+    .alerta-name { color: var(--text); flex: 1; }
+    .alerta-loc { color: var(--muted); font-size: 12px; margin: 0 12px; }
+    .alerta-qty { font-family: var(--font-mono); color: var(--warn); font-weight: 700; }
+
+    /* ── EMPTY STATE ─────────────────────────────────────────────── */
+    .empty {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--muted);
+    }
+    .empty .icon { font-size: 40px; display: block; margin-bottom: 12px; }
+    .empty p { font-size: 14px; }
+
+    /* ── SECTION DIVIDER ─────────────────────────────────────────── */
+    .section-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      margin-top: 28px;
+    }
+
+    .text-muted { color: var(--muted); font-size: 12px; }
+    .loc { color: var(--muted); font-size: 12px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #sidebar { display: none; }
+      #main { padding: 20px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="sidebar-logo">
+    <div class="lab">// FabLab</div>
+    <h1>INV<span>.</span>SYS</h1>
+  </div>
+  <nav>
+    <a class="active" onclick="navigate('dashboard')">
+      <span class="icon">⬡</span> Dashboard
+    </a>
+    <a onclick="navigate('itens')">
+      <span class="icon">◈</span> Itens
+      <span class="sidebar-badge" id="badge-baixo"></span>
+    </a>
+    <a onclick="navigate('movimentacoes')">
+      <span class="icon">↕</span> Movimentações
+    </a>
+    <a onclick="navigate('emprestimos')">
+      <span class="icon">⤵</span> Empréstimos
+      <span class="sidebar-badge" id="badge-emp"></span>
+    </a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- ── DASHBOARD ──────────────────────────────────────────────── -->
+  <div class="page active" id="page-dashboard">
+    <div class="page-header">
+      <h2>// <span>Dashboard</span></h2>
+      <button class="btn btn-ghost" onclick="loadDashboard()">⟳ Atualizar</button>
+    </div>
+
+    <div class="cards-grid" id="dash-cards">
+      <div class="card accent">
+        <div class="card-stat" id="stat-total">—</div>
+        <div class="card-label">Total de Itens</div>
+      </div>
+      <div class="card warn">
+        <div class="card-stat" id="stat-baixo">—</div>
+        <div class="card-label">Estoque Baixo</div>
+      </div>
+      <div class="card danger">
+        <div class="card-stat" id="stat-emp">—</div>
+        <div class="card-label">Empréstimos Ativos</div>
+      </div>
+      <div class="card blue">
+        <div class="card-stat" id="stat-mov">—</div>
+        <div class="card-label">Movimentações Hoje</div>
+      </div>
+    </div>
+
+    <div class="alertas-box" id="alertas-box" style="display:none">
+      <h3>⚠ Alerta de Estoque Baixo</h3>
+      <div id="alertas-list"></div>
+    </div>
+
+    <div class="section-title">Últimas Movimentações</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Item</th><th>Tipo</th><th>Qtd</th><th>Usuário</th><th>Data/Hora</th>
+        </tr></thead>
+        <tbody id="dash-mov-tbody"><tr><td colspan="5" class="empty"><span class="icon">↕</span><p>Sem movimentações ainda</p></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── ITENS ──────────────────────────────────────────────────── -->
+  <div class="page" id="page-itens">
+    <div class="page-header">
+      <h2>// <span>Itens</span></h2>
+      <button class="btn btn-primary" onclick="openModalItem()">+ Novo Item</button>
+    </div>
+    <div class="filters">
+      <input id="busca" type="text" placeholder="🔍 Buscar por nome ou nº série..." oninput="loadItens()">
+      <select id="filtro-cat" onchange="loadItens()">
+        <option value="">Todas as categorias</option>
+      </select>
+      <select id="filtro-loc" onchange="loadItens()">
+        <option value="">Todos os locais</option>
+      </select>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;">
+        <input type="checkbox" id="filtro-baixo" onchange="loadItens()"> Estoque baixo
+      </label>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Nome</th><th>Nº Série</th><th>Categoria</th><th>Localização</th><th>Qtd</th><th>Ações</th>
+        </tr></thead>
+        <tbody id="itens-tbody"></tbody>
+      </table>
+    </div>
+    <div id="itens-empty" class="empty" style="display:none">
+      <span class="icon">◈</span><p>Nenhum item encontrado.</p>
+    </div>
+  </div>
+
+  <!-- ── MOVIMENTAÇÕES ──────────────────────────────────────────── -->
+  <div class="page" id="page-movimentacoes">
+    <div class="page-header">
+      <h2>// <span>Movimentações</span></h2>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-ghost" onclick="openModalMov('entrada')">↓ Registrar Entrada</button>
+        <button class="btn btn-danger" onclick="openModalMov('saida')">↑ Registrar Saída</button>
+      </div>
+    </div>
+    <div class="filters">
+      <select id="filtro-mov-tipo" onchange="loadMovimentacoes()">
+        <option value="">Todos os tipos</option>
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Item</th><th>Tipo</th><th>Qtd</th><th>Motivo</th><th>Usuário</th><th>Data/Hora</th>
+        </tr></thead>
+        <tbody id="mov-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── EMPRÉSTIMOS ────────────────────────────────────────────── -->
+  <div class="page" id="page-emprestimos">
+    <div class="page-header">
+      <h2>// <span>Empréstimos</span></h2>
+      <button class="btn btn-primary" onclick="openModalEmp()">+ Novo Empréstimo</button>
+    </div>
+    <div class="filters">
+      <select id="filtro-emp-status" onchange="loadEmprestimos()">
+        <option value="">Todos</option>
+        <option value="ativo">Ativos</option>
+        <option value="devolvido">Devolvidos</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Item</th><th>Qtd</th><th>Usuário</th><th>Contato</th><th>Retirada</th><th>Devolução</th><th>Status</th><th>Ação</th>
+        </tr></thead>
+        <tbody id="emp-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── MODAL ITEM ──────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-item">
+  <div class="modal">
+    <h3 id="modal-item-title">Novo Item</h3>
+    <input type="hidden" id="item-id">
+    <div class="form-group">
+      <label>Nome *</label>
+      <input id="item-nome" type="text" placeholder="Ex: Resistor 10kΩ">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Número de Série</label>
+        <input id="item-serie" type="text" placeholder="Ex: SKU-001">
+      </div>
+      <div class="form-group">
+        <label>Categoria *</label>
+        <input id="item-categoria" type="text" list="cat-list" placeholder="Eletrônica">
+        <datalist id="cat-list"></datalist>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Localização *</label>
+        <input id="item-localizacao" type="text" list="loc-list" placeholder="Armário 1">
+        <datalist id="loc-list"></datalist>
+      </div>
+      <div class="form-group">
+        <label>Quantidade</label>
+        <input id="item-quantidade" type="number" min="0" value="0">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Qtd Mínima (alerta)</label>
+      <input id="item-minimo" type="number" min="0" value="2">
+    </div>
+    <div class="form-group">
+      <label>Observação</label>
+      <textarea id="item-obs" rows="2" placeholder="Observações adicionais..."></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-item')">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarItem()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL MOVIMENTAÇÃO ──────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-mov">
+  <div class="modal">
+    <h3 id="modal-mov-title">Registrar Entrada</h3>
+    <input type="hidden" id="mov-tipo">
+    <div class="form-group">
+      <label>Item *</label>
+      <select id="mov-item-id">
+        <option value="">Selecione um item...</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Quantidade *</label>
+        <input id="mov-quantidade" type="number" min="1" value="1">
+      </div>
+      <div class="form-group">
+        <label>Usuário</label>
+        <input id="mov-usuario" type="text" placeholder="Seu nome">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Motivo</label>
+      <input id="mov-motivo" type="text" placeholder="Ex: Compra, doação, uso em aula...">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-mov')">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarMov()">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL EMPRÉSTIMO ───────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-emp">
+  <div class="modal">
+    <h3>Registrar Empréstimo</h3>
+    <div class="form-group">
+      <label>Item *</label>
+      <select id="emp-item-id">
+        <option value="">Selecione um item...</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Quantidade *</label>
+        <input id="emp-quantidade" type="number" min="1" value="1">
+      </div>
+      <div class="form-group">
+        <label>Usuário Responsável *</label>
+        <input id="emp-usuario" type="text" placeholder="Nome completo">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Contato (email/telefone)</label>
+      <input id="emp-contato" type="text" placeholder="contato@email.com">
+    </div>
+    <div class="form-group">
+      <label>Motivo</label>
+      <input id="emp-motivo" type="text" placeholder="Ex: Projeto da disciplina X">
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal('modal-emp')">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarEmp()">Registrar Retirada</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script>
+const API = 'http://localhost:3001/api';
+let allItens = [];
+
+// ── NAVEGAÇÃO ─────────────────────────────────────────────────────
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('nav a')[['dashboard','itens','movimentacoes','emprestimos'].indexOf(page)]?.classList.add('active');
+
+  if (page === 'dashboard') loadDashboard();
+  if (page === 'itens') loadItens();
+  if (page === 'movimentacoes') loadMovimentacoes();
+  if (page === 'emprestimos') loadEmprestimos();
+}
+
+// ── TOAST ─────────────────────────────────────────────────────────
+function toast(msg, type = 'success') {
+  const el = document.createElement('div');
+  el.className = `toast-item ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
+
+// ── API HELPER ────────────────────────────────────────────────────
+async function api(path, method = 'GET', body = null) {
+  const opts = { method, headers: { 'Content-Type': 'application/json' } };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(API + path, opts);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.erro || 'Erro na requisição');
+  return data;
+}
+
+// ── MODAL ─────────────────────────────────────────────────────────
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+});
+
+// ── DASHBOARD ─────────────────────────────────────────────────────
+async function loadDashboard() {
+  try {
+    const d = await api('/dashboard');
+    document.getElementById('stat-total').textContent = d.total_itens;
+    document.getElementById('stat-baixo').textContent = d.estoque_baixo;
+    document.getElementById('stat-emp').textContent = d.emprestimos_ativos;
+    document.getElementById('stat-mov').textContent = d.movimentacoes_hoje;
+
+    // Badges sidebar
+    const badgeBaixo = document.getElementById('badge-baixo');
+    if (d.estoque_baixo > 0) { badgeBaixo.textContent = d.estoque_baixo; badgeBaixo.classList.add('show'); }
+    else badgeBaixo.classList.remove('show');
+
+    const badgeEmp = document.getElementById('badge-emp');
+    if (d.emprestimos_ativos > 0) { badgeEmp.textContent = d.emprestimos_ativos; badgeEmp.classList.add('show'); }
+    else badgeEmp.classList.remove('show');
+
+    // Alertas
+    const box = document.getElementById('alertas-box');
+    const list = document.getElementById('alertas-list');
+    if (d.alertas.length > 0) {
+      box.style.display = 'block';
+      list.innerHTML = d.alertas.map(a => `
+        <div class="alerta-row">
+          <span class="alerta-name">${a.nome}</span>
+          <span class="alerta-loc">${a.localizacao}</span>
+          <span class="alerta-qty">${a.quantidade} / ${a.quantidade_minima} mín.</span>
+        </div>
+      `).join('');
+    } else box.style.display = 'none';
+
+    // Últimas movimentações
+    const tbody = document.getElementById('dash-mov-tbody');
+    if (d.ultimas_movimentacoes.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5"><div class="empty"><span class="icon">↕</span><p>Sem movimentações ainda</p></div></td></tr>';
+    } else {
+      tbody.innerHTML = d.ultimas_movimentacoes.map(m => `
+        <tr>
+          <td>${m.item_nome}</td>
+          <td><span class="badge badge-${m.tipo}">${m.tipo}</span></td>
+          <td class="qty">${m.quantidade}</td>
+          <td class="text-muted">${m.usuario}</td>
+          <td class="text-muted">${formatDate(m.data_hora)}</td>
+        </tr>
+      `).join('');
+    }
+  } catch(e) { toast('Erro ao carregar dashboard: ' + e.message, 'error'); }
+}
+
+// ── ITENS ─────────────────────────────────────────────────────────
+async function loadItens() {
+  try {
+    const busca = document.getElementById('busca').value;
+    const cat = document.getElementById('filtro-cat').value;
+    const loc = document.getElementById('filtro-loc').value;
+    const baixo = document.getElementById('filtro-baixo').checked;
+
+    let params = new URLSearchParams();
+    if (busca) params.set('busca', busca);
+    if (cat) params.set('categoria', cat);
+    if (loc) params.set('localizacao', loc);
+    if (baixo) params.set('estoque_baixo', 'true');
+
+    allItens = await api('/itens?' + params.toString());
+    renderItens();
+  } catch(e) { toast('Erro ao carregar itens: ' + e.message, 'error'); }
+}
+
+function renderItens() {
+  const tbody = document.getElementById('itens-tbody');
+  const empty = document.getElementById('itens-empty');
+  if (allItens.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  tbody.innerHTML = allItens.map(item => {
+    const qtyClass = item.quantidade === 0 ? 'badge-zero' : item.quantidade <= item.quantidade_minima ? 'badge-low' : 'badge-ok';
+    return `
+      <tr>
+        <td class="text-muted">#${item.id}</td>
+        <td>
+          <div>${item.nome}</div>
+          ${item.observacao ? `<div class="text-muted">${item.observacao}</div>` : ''}
+        </td>
+        <td class="text-muted">${item.numero_serie || '—'}</td>
+        <td><span class="badge badge-cat">${item.categoria}</span></td>
+        <td class="loc">${item.localizacao}</td>
+        <td><span class="badge ${qtyClass} qty">${item.quantidade}</span></td>
+        <td>
+          <div style="display:flex;gap:6px;">
+            <button class="btn btn-ghost btn-sm" onclick="editItem(${item.id})">✎ Editar</button>
+            <button class="btn btn-danger btn-sm" onclick="deletarItem(${item.id}, '${item.nome.replace(/'/g,"\\'")}')">✕</button>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+async function loadFiltros() {
+  try {
+    const [cats, locs] = await Promise.all([api('/categorias'), api('/localizacoes')]);
+    const catSel = document.getElementById('filtro-cat');
+    const locSel = document.getElementById('filtro-loc');
+    const catList = document.getElementById('cat-list');
+    const locList = document.getElementById('loc-list');
+
+    cats.forEach(c => {
+      catSel.innerHTML += `<option value="${c}">${c}</option>`;
+      catList.innerHTML += `<option value="${c}">`;
+    });
+    locs.forEach(l => {
+      locSel.innerHTML += `<option value="${l}">${l}</option>`;
+      locList.innerHTML += `<option value="${l}">`;
+    });
+  } catch(e) {}
+}
+
+function openModalItem() {
+  document.getElementById('item-id').value = '';
+  document.getElementById('item-nome').value = '';
+  document.getElementById('item-serie').value = '';
+  document.getElementById('item-categoria').value = '';
+  document.getElementById('item-localizacao').value = '';
+  document.getElementById('item-quantidade').value = '0';
+  document.getElementById('item-minimo').value = '2';
+  document.getElementById('item-obs').value = '';
+  document.getElementById('modal-item-title').textContent = 'Novo Item';
+  openModal('modal-item');
+}
+
+async function editItem(id) {
+  try {
+    const item = await api('/itens/' + id);
+    document.getElementById('item-id').value = item.id;
+    document.getElementById('item-nome').value = item.nome;
+    document.getElementById('item-serie').value = item.numero_serie;
+    document.getElementById('item-categoria').value = item.categoria;
+    document.getElementById('item-localizacao').value = item.localizacao;
+    document.getElementById('item-quantidade').value = item.quantidade;
+    document.getElementById('item-minimo').value = item.quantidade_minima;
+    document.getElementById('item-obs').value = item.observacao;
+    document.getElementById('modal-item-title').textContent = 'Editar Item';
+    openModal('modal-item');
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function salvarItem() {
+  const id = document.getElementById('item-id').value;
+  const body = {
+    nome: document.getElementById('item-nome').value.trim(),
+    numero_serie: document.getElementById('item-serie').value.trim(),
+    categoria: document.getElementById('item-categoria').value.trim(),
+    localizacao: document.getElementById('item-localizacao').value.trim(),
+    quantidade: parseInt(document.getElementById('item-quantidade').value),
+    quantidade_minima: parseInt(document.getElementById('item-minimo').value),
+    observacao: document.getElementById('item-obs').value.trim(),
+  };
+  if (!body.nome || !body.categoria || !body.localizacao) {
+    return toast('Preencha os campos obrigatórios: Nome, Categoria e Localização', 'warn');
+  }
+  try {
+    if (id) {
+      await api('/itens/' + id, 'PUT', body);
+      toast('Item atualizado com sucesso!');
+    } else {
+      await api('/itens', 'POST', body);
+      toast('Item criado com sucesso!');
+    }
+    closeModal('modal-item');
+    loadItens();
+    loadFiltros();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function deletarItem(id, nome) {
+  if (!confirm(`Deseja excluir o item "${nome}"?`)) return;
+  try {
+    await api('/itens/' + id, 'DELETE');
+    toast('Item excluído com sucesso!');
+    loadItens();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── MOVIMENTAÇÕES ─────────────────────────────────────────────────
+async function loadMovimentacoes() {
+  try {
+    const tipo = document.getElementById('filtro-mov-tipo').value;
+    let params = new URLSearchParams({ limit: 200 });
+    if (tipo) params.set('tipo', tipo);
+    const movs = await api('/movimentacoes?' + params.toString());
+    const tbody = document.getElementById('mov-tbody');
+    if (movs.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6"><div class="empty"><span class="icon">↕</span><p>Sem movimentações ainda</p></div></td></tr>';
+      return;
+    }
+    tbody.innerHTML = movs.map(m => `
+      <tr>
+        <td>${m.item_nome}<div class="text-muted">${m.categoria}</div></td>
+        <td><span class="badge badge-${m.tipo}">${m.tipo}</span></td>
+        <td class="qty">${m.quantidade}</td>
+        <td class="text-muted">${m.motivo || '—'}</td>
+        <td class="text-muted">${m.usuario}</td>
+        <td class="text-muted">${formatDate(m.data_hora)}</td>
+      </tr>
+    `).join('');
+  } catch(e) { toast('Erro ao carregar movimentações', 'error'); }
+}
+
+async function populateItemSelects() {
+  const itens = await api('/itens');
+  const opts = itens.map(i => `<option value="${i.id}">${i.nome} [${i.localizacao}] — Qtd: ${i.quantidade}</option>`).join('');
+  document.getElementById('mov-item-id').innerHTML = '<option value="">Selecione...</option>' + opts;
+  document.getElementById('emp-item-id').innerHTML = '<option value="">Selecione...</option>' + opts;
+}
+
+function openModalMov(tipo) {
+  document.getElementById('mov-tipo').value = tipo;
+  document.getElementById('modal-mov-title').textContent = tipo === 'entrada' ? '↓ Registrar Entrada' : '↑ Registrar Saída';
+  document.getElementById('mov-quantidade').value = '1';
+  document.getElementById('mov-motivo').value = '';
+  document.getElementById('mov-usuario').value = '';
+  populateItemSelects();
+  openModal('modal-mov');
+}
+
+async function salvarMov() {
+  const body = {
+    item_id: parseInt(document.getElementById('mov-item-id').value),
+    tipo: document.getElementById('mov-tipo').value,
+    quantidade: parseInt(document.getElementById('mov-quantidade').value),
+    motivo: document.getElementById('mov-motivo').value,
+    usuario: document.getElementById('mov-usuario').value || 'Sistema',
+  };
+  if (!body.item_id || !body.quantidade) return toast('Selecione um item e informe a quantidade', 'warn');
+  try {
+    const r = await api('/movimentacoes', 'POST', body);
+    toast(r.mensagem);
+    closeModal('modal-mov');
+    loadMovimentacoes();
+    loadItens();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── EMPRÉSTIMOS ───────────────────────────────────────────────────
+async function loadEmprestimos() {
+  try {
+    const status = document.getElementById('filtro-emp-status').value;
+    let params = new URLSearchParams();
+    if (status) params.set('status', status);
+    const emps = await api('/emprestimos?' + params.toString());
+    const tbody = document.getElementById('emp-tbody');
+    if (emps.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="9"><div class="empty"><span class="icon">⤵</span><p>Nenhum empréstimo encontrado</p></div></td></tr>';
+      return;
+    }
+    tbody.innerHTML = emps.map(e => `
+      <tr>
+        <td class="text-muted">#${e.id}</td>
+        <td>${e.item_nome}<div class="loc">${e.localizacao}</div></td>
+        <td class="qty">${e.quantidade}</td>
+        <td>${e.usuario_nome}</td>
+        <td class="text-muted">${e.usuario_contato || '—'}</td>
+        <td class="text-muted">${formatDate(e.data_retirada)}</td>
+        <td class="text-muted">${e.data_devolucao ? formatDate(e.data_devolucao) : '—'}</td>
+        <td><span class="badge badge-${e.status}">${e.status}</span></td>
+        <td>
+          ${e.status === 'ativo'
+            ? `<button class="btn btn-warn btn-sm" onclick="devolverEmp(${e.id})">⟳ Devolver</button>`
+            : '—'}
+        </td>
+      </tr>
+    `).join('');
+  } catch(e) { toast('Erro ao carregar empréstimos', 'error'); }
+}
+
+function openModalEmp() {
+  document.getElementById('emp-quantidade').value = '1';
+  document.getElementById('emp-usuario').value = '';
+  document.getElementById('emp-contato').value = '';
+  document.getElementById('emp-motivo').value = '';
+  populateItemSelects();
+  openModal('modal-emp');
+}
+
+async function salvarEmp() {
+  const body = {
+    item_id: parseInt(document.getElementById('emp-item-id').value),
+    quantidade: parseInt(document.getElementById('emp-quantidade').value),
+    usuario_nome: document.getElementById('emp-usuario').value.trim(),
+    usuario_contato: document.getElementById('emp-contato').value.trim(),
+    motivo: document.getElementById('emp-motivo').value.trim(),
+  };
+  if (!body.item_id || !body.quantidade || !body.usuario_nome) {
+    return toast('Preencha item, quantidade e nome do usuário', 'warn');
+  }
+  try {
+    const r = await api('/emprestimos', 'POST', body);
+    toast(r.mensagem);
+    closeModal('modal-emp');
+    loadEmprestimos();
+    loadItens();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function devolverEmp(id) {
+  if (!confirm('Confirmar devolução deste item?')) return;
+  try {
+    const r = await api(`/emprestimos/${id}/devolver`, 'PUT');
+    toast(r.mensagem);
+    loadEmprestimos();
+    loadDashboard();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── UTILS ─────────────────────────────────────────────────────────
+function formatDate(str) {
+  if (!str) return '—';
+  const d = new Date(str);
+  return d.toLocaleString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+async function init() {
+  await loadFiltros();
+  loadDashboard();
+}
+init();
+</script>
+</body>
+</html>
