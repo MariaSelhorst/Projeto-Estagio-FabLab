@@ -1,0 +1,2122 @@
+[
+  {
+    "id": 1,
+    "nome": "Display LCD 2004A - 20x4 (sem módulo)",
+    "numero_serie": "2004A",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 2,
+    "nome": "Display LCD 2004A - 20X4 Módulo i2c",
+    "numero_serie": "2004A",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 5,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 3,
+    "nome": "Display LCD 1602A - 16x2 Módulo i2c",
+    "numero_serie": "1602A",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 4,
+    "nome": "Display LCD 1602A - 16x2 (sem módulo)",
+    "numero_serie": "1602A",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 5,
+    "nome": "Display LCD 1602H - 16x2 (sem módulo)",
+    "numero_serie": "1602H",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 6,
+    "nome": "Display de led de 7 seguimentos de 4 ditos",
+    "numero_serie": "5463AS-1",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 7,
+    "nome": "Display de led de 7 seguimentos de 1 digito",
+    "numero_serie": "HS-5101AS",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 42,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 8,
+    "nome": "Display de led de 7 seguimentos de 3 digitos",
+    "numero_serie": "3631AS-1",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 9,
+    "nome": "Módulo Buzzer 5v - Passivo",
+    "numero_serie": "YL-44",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 29,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 10,
+    "nome": "Sensor de medição de fluxo de água | 1-30L/min",
+    "numero_serie": "YF-S201",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 11,
+    "nome": "Sensor de corrente alternada | 100A:50MA",
+    "numero_serie": "SCT013",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 12,
+    "nome": "Sensor Capacitivo PNP de proximidade | 6-36W 300MA",
+    "numero_serie": "LJC18A3-H-Z/BY",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 13,
+    "nome": "Sensor de distância ultrasonico | 2cm-4M |4Khz",
+    "numero_serie": "HC-SR04",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 14,
+    "nome": "Módulo de sensor de chuva |",
+    "numero_serie": "MH-RD",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 15,
+    "nome": "Módulo de pulso",
+    "numero_serie": "XD-58C",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 16,
+    "nome": "Módulo Wireless/Transeptor sem fio | 2.4Ghz",
+    "numero_serie": "NRF24L01",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 17,
+    "nome": "Módulo de sensor de temperatura e umidade",
+    "numero_serie": "HW-036",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 18,
+    "nome": "Potenciômetro Linear B1K",
+    "numero_serie": "HW148",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 42,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 19,
+    "nome": "Potenciômetro Linear B2K",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 36,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 20,
+    "nome": "Potenciômetro Linear B10K",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 21,
+    "nome": "Módulo eletronico LDR Sensor Luminosidade eletríca | 200V CC | 250MW | 150MM",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 29,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 22,
+    "nome": "Módulo sensor de pressão barometríca",
+    "numero_serie": "GY-68",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 23,
+    "nome": "Mini sensor de presença | 100º | 3-7M",
+    "numero_serie": "SR505",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 5,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 24,
+    "nome": "Sensor de som |",
+    "numero_serie": "KY-037",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 25,
+    "nome": "Micro controlador ESP8266mod",
+    "numero_serie": "USP8266mod",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 26,
+    "nome": "USP8266ex",
+    "numero_serie": "USP8266ex",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 27,
+    "nome": "Conector P4 Macho com Borne de Parafuso (conector KRE)",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 15,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 28,
+    "nome": "Módulo Joystick Analógico para Arduino",
+    "numero_serie": "KY-023",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 29,
+    "nome": "ESP32 LoRa V3 HELTEC | 433-510Mhz com Display OLED Bluetooth e Wifi",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 30,
+    "nome": "Chave DIP de 12 vias (Dual In-Line Package)",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 24,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 31,
+    "nome": "Terminal furquilha garfo pré-isolado |  4-6mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 32,
+    "nome": "Conector Terminal Tubolar Ilhos Pre Isolado 1mm Lukma",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 100,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 33,
+    "nome": "Potenciometro de ajuste (Trimpot)",
+    "numero_serie": "3386",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 41,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 34,
+    "nome": "Barra de 40 pinos macho 180o",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 0,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 35,
+    "nome": "Conector Pino Macho 90°",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 0,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 36,
+    "nome": "Módulo Relé 5v dois canais",
+    "numero_serie": "2PH63091A",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 37,
+    "nome": "Fita dessoldadora | 1,5 x 2,5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Gaveteiro novo",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 38,
+    "nome": "Sensor de Presença PIR | HC-SR501",
+    "numero_serie": "HC-SR501",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 39,
+    "nome": "Acelerômetro e Giroscópio 3 Eixos | MPU-6050 GY-521",
+    "numero_serie": "GY-521",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 40,
+    "nome": "Conector Borne Fêmea 3 Pinos",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 41,
+    "nome": "Conector Borne Fêmea 2 Pinos",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 42,
+    "nome": "Conector Borne Fêmea 5 Pinos",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 43,
+    "nome": "Conector Borne Fêmea 4 Pinos",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 44,
+    "nome": "Conector Borne Fêmea 6 Pinos",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 45,
+    "nome": "Módulo i2c",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 46,
+    "nome": "Módulo Bluetooth HC-05",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 47,
+    "nome": "Módulo buzzer Pequeno Passivo KY-006",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 48,
+    "nome": "Diodos Retificadores | 1N4007",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 49,
+    "nome": "Driver Motor Ponte H L298N",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 6,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 50,
+    "nome": "RODAS AMARELAS",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 17,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 51,
+    "nome": "Motor DC 3-6V",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 18,
+    "quantidade_minima": 2,
+    "observacao": "Dois para projeto do Matheus"
+  },
+  {
+    "id": 52,
+    "nome": "Micro Servo motor 9g",
+    "numero_serie": "SG90",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 53,
+    "nome": "Rele  T73DC",
+    "numero_serie": "12v5t10a",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 144,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 54,
+    "nome": "LED VERDE 5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 74,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 55,
+    "nome": "LED VERDE 3mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 93,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 56,
+    "nome": "Mascaras",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 34,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 57,
+    "nome": "2 Pacotes de  100 Luvas de borracha  + luvas em pacote separado",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 221,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 58,
+    "nome": "Luvas de segurança de malha",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 0,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 59,
+    "nome": "Protetores auditivos tipo concha",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 60,
+    "nome": "Óculos de proteção individual",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 134,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 61,
+    "nome": "Proteção Facial",
+    "numero_serie": "",
+    "categoria": "EPIs",
+    "localizacao": "Armário 3",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 62,
+    "nome": "ER20 COLLET (Pinça de Fixação) 1mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 63,
+    "nome": "ER20 COLLET (Pinça de Fixação) 2mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 64,
+    "nome": "ER20 COLLET (Pinça de Fixação) 3mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 65,
+    "nome": "ER20 COLLET (Pinça de Fixação) 4mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 66,
+    "nome": "ER20 COLLET (Pinça de Fixação) 5mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 67,
+    "nome": "ER20 COLLET (Pinça de Fixação) 6mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 68,
+    "nome": "ER20 COLLET (Pinça de Fixação) 7mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 69,
+    "nome": "ER20 COLLET (Pinça de Fixação) 8mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 70,
+    "nome": "ER20 COLLET (Pinça de Fixação) 9mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 71,
+    "nome": "ER20 COLLET (Pinça de Fixação) 10mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 72,
+    "nome": "ER20 COLLET (Pinça de Fixação) 11mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 73,
+    "nome": "ER20 COLLET (Pinça de Fixação) 12mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 74,
+    "nome": "ER20 COLLET (Pinça de Fixação) 13mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 75,
+    "nome": "ER20 COLLET (Pinça de Fixação) 7/32 Polegadas",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 76,
+    "nome": "Fresa para Entalhe 3d Vbit - 22mmx60°",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 77,
+    "nome": "Fresa para Entalhe 3d Vbit - 22mmx90°",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 78,
+    "nome": "Fresa para Entalhe 3d Vbit  - 22mmx120°",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 79,
+    "nome": "Fresa para Entalhe 3d Vbit - 32mmx60º",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 80,
+    "nome": "Fresa para Entalhe 3d Vbit - 32mmx90°",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 81,
+    "nome": "Fresa para Entalhe 3d Vbit - 32mmx120°",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 82,
+    "nome": "Fresa de Chanfrar 45° - 6x13mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 83,
+    "nome": "Fresa de Chanfrar 45° - 6x22mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 84,
+    "nome": "Fresa de Chanfrar 45° - 6x32mm",
+    "numero_serie": "",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 85,
+    "nome": "Kit Fresa DeWALT 12 peças -  8mm",
+    "numero_serie": "DR9992-XC",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 86,
+    "nome": "Kit Fresa WORKER 12 peças - 6mm",
+    "numero_serie": "470228",
+    "categoria": "Router CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 87,
+    "nome": "Fresa 2 Cortes Retos Paralelos - 3x12mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 88,
+    "nome": "Fresa 2 Cortes retos paralelos - 4x22mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 89,
+    "nome": "Fresa 2 Cortes retos paralelos - 6x30mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 90,
+    "nome": "Fresa 2 Cortes Retos Paralelos - 6x32mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 91,
+    "nome": "Fresa 2 Cortes retos paralelos - 8x32mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 92,
+    "nome": "Fresa para Plástico 1 Corte - 10x32mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 93,
+    "nome": "Fresa de Topo  4 Cortes - 20x65mm",
+    "numero_serie": "EC-A4",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 94,
+    "nome": "Fresa de Topo 4 Cortes - 16x65mm",
+    "numero_serie": "EC-A4",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 95,
+    "nome": "Fresa de Topo 4 Cortes - 10x60mm",
+    "numero_serie": "EC-A4",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 96,
+    "nome": "Fresa de Topo 4 Cortes - 6x15mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 97,
+    "nome": "Fresa de Topo 3 Cortes - 18x32mm",
+    "numero_serie": "EC180B32",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 98,
+    "nome": "Fresa de Topo 3 Cortes - 14x30mm",
+    "numero_serie": "ECA-B-314",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 99,
+    "nome": "Fresa de Topo 3 Cortes - 12x25mm",
+    "numero_serie": "ECA-B-312",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 100,
+    "nome": "Fresa de Topo 3 Cortes - 8x20mm",
+    "numero_serie": "ECA-B-320",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 101,
+    "nome": "Fresa 2 Cortes Up&Down - 8x35mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 102,
+    "nome": "Fresa 2 Cortes Up&Down - 6x20mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 103,
+    "nome": "Fresa 2 Cortes Up&Down - 4x22mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 104,
+    "nome": "Fresa Ball Nose 4/5mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 105,
+    "nome": "Fresa Cônica Ball Nose 4/5mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 106,
+    "nome": "Fresa Ball Nose 5/10mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 107,
+    "nome": "Fresa Ball Nose 14/30mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 108,
+    "nome": "Fresa Ball Nose 20/30mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para o Ismael Senai Tecnico"
+  },
+  {
+    "id": 109,
+    "nome": "Fresa Ball Nose 8/12mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 110,
+    "nome": "Fresa Ball Nose 4 cortes 18/20mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 111,
+    "nome": "Fresa Ball Nose 16/30mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 112,
+    "nome": "Fresa 2 Cortes 18/35mm -",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 113,
+    "nome": "Fresa 2 Cortes Invertidos 4/17mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 114,
+    "nome": "Fresa 2 Cortes 6/18mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 115,
+    "nome": "Fresa 2 Cortes 6/22mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 116,
+    "nome": "Fresa 2 Cortes 4/18mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 117,
+    "nome": "Fresa 2 Cortes 2/22mm",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 118,
+    "nome": "Kit de Macho Manuais HT Ferramentas",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 119,
+    "nome": "Fresa para Plástico 1 Corte 10x32mm -2",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 120,
+    "nome": "Fresa para Plástico 1 Corte 6x22mm - 2",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 121,
+    "nome": "Fresa para Plástico 1 Corte 8x26mm - 2",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 122,
+    "nome": "Fresa para Plástico 1 Corte 4x26mm - 1",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 123,
+    "nome": "Fresa para Plástico 1 Corte 4x22mm - 3",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 124,
+    "nome": "Fresa para Plástico 1 Corte 3x17mm - 1",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 125,
+    "nome": "Fresa para Plástico 1 Corte 2x8mm - 2",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 126,
+    "nome": "Fresa para Plástico 1 Corte 5x24mm - 1",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 127,
+    "nome": "Fresa 1 corte reto 4x13mm -1",
+    "numero_serie": "",
+    "categoria": "Fresa CNC",
+    "localizacao": "Gaveta - Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 128,
+    "nome": "TINTA SPRAY -  Verde amazonas",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 129,
+    "nome": "TINTA SPRAY - Verde",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 7,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 130,
+    "nome": "TINTA SPRAY - Verde bandeira",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 131,
+    "nome": "TINTA SPRAY - Marrom Barro",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 132,
+    "nome": "TINTA SPRAY - Marrom Café",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 133,
+    "nome": "TINTA SPRAY - Marrom",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 134,
+    "nome": "TINTA SPRAY - Laranja",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 4,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 135,
+    "nome": "TINTA SPRAY - Grafite",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": "Emprestado para Magdiel Senai"
+  },
+  {
+    "id": 136,
+    "nome": "TINTA SPRAY - Azul Moderno",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 137,
+    "nome": "TINTA SPRAY - Amarelo",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 7,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 138,
+    "nome": "TINTA SPRAY - Vermelho",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 139,
+    "nome": "Primer Spray Cinza",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 140,
+    "nome": "Thinner",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 5,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 141,
+    "nome": "Verniz Incolor",
+    "numero_serie": "",
+    "categoria": "Tintas",
+    "localizacao": "Armário 7",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 142,
+    "nome": "LED AMARELO 5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 467,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 143,
+    "nome": "LED AMARELO 3mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 523,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 144,
+    "nome": "LED AZUL 5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 183,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 145,
+    "nome": "LED BRANCO 3mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 52,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 146,
+    "nome": "LED BRANCO 5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 45,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 147,
+    "nome": "LED VERMELHO 3mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 203,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 148,
+    "nome": "LED VERMELHO 5mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 6,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 149,
+    "nome": "Kit Arduino",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 150,
+    "nome": "Cabo USB-A to Micro USB",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 19,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 151,
+    "nome": "LED Infravermelho",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 152,
+    "nome": "Conector BNC",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 4",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 153,
+    "nome": "Serrote Fertak 22\"",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 154,
+    "nome": "Granpeador de Madeira",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 155,
+    "nome": "Kit de Micro Retífica",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 156,
+    "nome": "Catalizador para Massa Poliester",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 157,
+    "nome": "Massa para Madeira",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 158,
+    "nome": "Massa Poliester",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 159,
+    "nome": "Lâmina de Serra Manual quebrada",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 160,
+    "nome": "Mini Serra Dreamel  Saw - Max",
+    "numero_serie": "SM20",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 161,
+    "nome": "Kit de acessórios para Micro Retifica 150 pçs.  Rocast",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 162,
+    "nome": "Parafusadeira e Furadeira Vonder sem Fio",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 163,
+    "nome": "Serra Tico-Tico de Bancada Dreamel",
+    "numero_serie": "MS20",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 164,
+    "nome": "Jogo de Broca e Ponteiras 122 pçs. Gamma",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 1,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 165,
+    "nome": "Kit Alicate Prensa Terminais 5 em 1 Vonder",
+    "numero_serie": "AP510-2",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 166,
+    "nome": "Abraçadeiras Nylon 3,5x200mm 100 un.",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 167,
+    "nome": "Abraçadeiras Nylon 4,8x280mm 100 un.",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 168,
+    "nome": "Esponja Abrasiva Ultrafina",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 6,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 169,
+    "nome": "Esponja Abrasiva Fina",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 2,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 170,
+    "nome": "Esponja Abrasiva Superfina",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 9,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 171,
+    "nome": "Esponja Abrasiva Média",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 172,
+    "nome": "Lixa P800 79C CAR39",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 22,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 173,
+    "nome": "Lixa A400 67C Cabodry",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 13,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 174,
+    "nome": "Lixa A400 30D Cabodry",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 8,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 175,
+    "nome": "Lixa A220 DG Cabodry",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 16,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 176,
+    "nome": "Lixa P600 326U Cabodry",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 18,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 177,
+    "nome": "Parafuso Diversos",
+    "numero_serie": "",
+    "categoria": "Ferramenta",
+    "localizacao": "Armário 6",
+    "quantidade": 0,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 178,
+    "nome": "Tubo Termo-retratil - Branco 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 19,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 179,
+    "nome": "Tubo Termo-retratil - Azul 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 20,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 180,
+    "nome": "Tubo Termo-retratil - Preto 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 16,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 181,
+    "nome": "Tubo Termo-retratil - Amarelo 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 20,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 182,
+    "nome": "Tubo Termo-retratil - Verde 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 20,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 183,
+    "nome": "Tubo Termo-retratil - Vermelho 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 19,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 184,
+    "nome": "Tubo Termo-retratil - Transparente 5mm/2.5mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 19,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 185,
+    "nome": "Tubo Termo-retratil - Branco 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 34,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 186,
+    "nome": "Tubo Termo-retratil - Azul 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 35,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 187,
+    "nome": "Tubo Termo-retratil - Preto 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 33,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 188,
+    "nome": "Tubo Termo-retratil - Amarelo 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 35,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 189,
+    "nome": "Tubo Termo-retratil - Verde 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 37,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 190,
+    "nome": "Tubo Termo-retratil - Vermelho 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 34,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 191,
+    "nome": "Tubo Termo-retratil - Transparente 1mm/0.6mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 37,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 192,
+    "nome": "Tubo Termo-retratil - Branco 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 39,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 193,
+    "nome": "Tubo Termo-retratil - Azul 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 40,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 194,
+    "nome": "Tubo Termo-retratil - Preto 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 36,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 195,
+    "nome": "Tubo Termo-retratil - Amarelo 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 40,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 196,
+    "nome": "Tubo Termo-retratil - Verde 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 40,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 197,
+    "nome": "Tubo Termo-retratil - Vermelho 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 37,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 198,
+    "nome": "Tubo Termo-retratil - Transparente 4mm/2mm Ø",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 40,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 199,
+    "nome": "Kit Cabo Jacaré",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 23,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 200,
+    "nome": "Modulo Ethernet Shield W5100 para Arduino",
+    "numero_serie": "W5100",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 0,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 201,
+    "nome": "Placa de ensaio (protoboard) - 830 pontos",
+    "numero_serie": "MB-102",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 8,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 202,
+    "nome": "Placa de ensaio (protoboard) - 400 pontos",
+    "numero_serie": "PB-400",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 10,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 203,
+    "nome": "Placa Fenolite Perfurada - 100x150mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 8,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 204,
+    "nome": "Placa de Circuito Impresso Dupla Face 90x70mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 6,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 205,
+    "nome": "Placa Fenolite Simples 100x100mm",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 37,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 206,
+    "nome": "Cabo USB-A to B",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 8,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 207,
+    "nome": "ESP32 DEVKITV1",
+    "numero_serie": "ESP-WROOM-32",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 3,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 208,
+    "nome": "Arduino UNO",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 8,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 209,
+    "nome": "Interruptor tátil - 6x6x5 mm - 4 terminais",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Gaveta- Armário 2",
+    "quantidade": 200,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 210,
+    "nome": "Chave táctil - 6x6x9,5 mm - 4 terminais",
+    "numero_serie": "KFC-A06",
+    "categoria": "Eletrônica",
+    "localizacao": "Gaveta- Armário 2",
+    "quantidade": 35,
+    "quantidade_minima": 2,
+    "observacao": "Tensão Máxima - 12V  - Corrente Máxima 0,5A"
+  },
+  {
+    "id": 211,
+    "nome": "Micro chave táctil - 4 terminais",
+    "numero_serie": "",
+    "categoria": "Eletrônica",
+    "localizacao": "Gaveta- Armário 2",
+    "quantidade": 35,
+    "quantidade_minima": 2,
+    "observacao": ""
+  },
+  {
+    "id": 212,
+    "nome": "ESP32-CAM",
+    "numero_serie": "ESP32-CAM",
+    "categoria": "Eletrônica",
+    "localizacao": "Armário 2",
+    "quantidade": 7,
+    "quantidade_minima": 2,
+    "observacao": ""
+  }
+]
